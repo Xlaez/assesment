@@ -2,7 +2,7 @@ import {CopyIcon, MenuIcon, SearchIcon, ShoppingCartIcon} from "lucide-react"
 
 const Header: React.FC = () => {
     return(
-        <nav className="flex bg-[#0E131A] justify-between px-[3rem] py-6 items-center text-white border-[#FFFFFF] border-b-[1px]">
+        <nav className="flex bg-[#0E131A] justify-between px-[3rem] py-6 items-center text-white border-[#FFFFFF] border-b-1">
             <div className="">
                 <CopyIcon/>
             </div>

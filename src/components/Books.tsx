@@ -60,7 +60,7 @@ const Book: React.FC<{book: IBook}> = ({book}) => {
             <div className={`gap-2 flex-col max-w-[150px] ${book.category == "romance" && "text-[#B700E0]"} ${book.category == "children" && "text-[#EA323E]"} ${book.category == "african literature" && "text-[#0068E0]"} ${book.category == "thriller" && "text-[#EF7D00]"}`}>
                 <h1 className={`uppercase text-[0.8rem] pt-2`}>{book.category}</h1>
                 <strong>{book.title}</strong>
-                <div className="py-3">
+                <div className="py-2">
                     <small className="text-white">{book.author}</small>
                 </div>
                 <span className="text-white">${book.price}</span>
