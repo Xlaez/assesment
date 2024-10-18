@@ -7,6 +7,7 @@ import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+// @ts-ignore
 const BookPage: React.FC = ({params}: {params: {id:string}}) => {
     const [isOpen, setIsOpen] = useState(false);
 
