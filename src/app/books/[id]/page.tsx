@@ -2,7 +2,7 @@
 import { BookCover } from "@/app/assets";
 import { Books, Footer, Header } from "@/components";
 import { books, IBook } from "@/helpers";
-import { ArrowRightCircleIcon, CheckCircleIcon, XCircleIcon, XIcon, } from "lucide-react";
+import { ArrowRightCircleIcon, CheckCircle2Icon, CheckCircleIcon, StarIcon, XCircleIcon, XIcon, } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -30,10 +30,10 @@ const BookPage: React.FC = ({params}: {params: {id:string}}) => {
                 <XCircleIcon onClick={closeModal} className="cursor-pointer text-black text-2xl"/>
             </div>
 
-            <div className="flex justify-between">
-                <div className="flex flex-col gap-2 w-full border-gray-400 border-r-[1px]">
+            <div className="flex w-full">
+                <div className="w-2/5 flex flex-col gap-1 w-full border-gray-400 border-r-[1px]">
                     <div className="flex items-center w-full justify-left gap-4">
-                        <CheckCircleIcon className="text-purple-600 w-[40px] mr-2"/>
+                        <CheckCircle2Icon className="text-purple-600 w-[40px]"/>
                         <h3 className="text-black text-lg font-bold inline">Added to Cart</h3>
                     </div>
 
@@ -42,16 +42,16 @@ const BookPage: React.FC = ({params}: {params: {id:string}}) => {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-4 flex w-full px-5">
+                <div className="w-3/5 flex flex-col gap-4 flex w-full px-5">
                     <div className="mt-4 text-left">
                     <p className="text-2xl font-bold">Cart Subtotal: <span className="text-black">$10.00</span></p>
                     </div>
 
                     <div className="mt-6 flex flex-col space-y-8">
-                    <button className="bg-[#B700E0] text-white py-2 rounded-lg font-semibold">
+                    <button className="cursor-pointer bg-[#B700E0] text-white py-2 rounded-lg font-semibold" onClick={()=> router.push("/checkout")}>
                         Proceed to Checkout
                     </button>
-                    <button className="border border-[#B700E0] text-[#B700E0] py-2 rounded-lg font-semibold">
+                    <button className="cursor-pointer border border-[#B700E0] text-[#B700E0] py-2 rounded-lg font-semibold">
                         Go to Cart
                     </button>
                 </div>
@@ -74,6 +74,15 @@ const BookPage: React.FC = ({params}: {params: {id:string}}) => {
                         <h1>Date Released</h1>
                         <h2 className="text-[#FFFFFF40]">{book?.date}</h2>
                         <h1>Ratings</h1>
+                        
+                           <p className="flex items-center gap-2 pb-2">
+                                    <StarIcon className="w-[15px] h-[15px] text-[#B700E0]"/>
+                                    <StarIcon className="w-[15px] h-[15px] text-[#B700E0]"/>
+                                    <StarIcon className="w-[15px] h-[15px] text-[#B700E0]"/>
+                                    <StarIcon className="w-[15px] h-[15px] text-[#B700E0]"/>
+                                    <StarIcon className="w-[15px] h-[15px] text-[#B700E0]"/>
+                                </p>
+
                         <div></div>
                     </div>
                     <div className="w-4/5">
